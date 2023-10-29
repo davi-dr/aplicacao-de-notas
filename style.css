@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    padding: 10px;
+    background-image: url(add_notes.svg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right bottom;
+    /* background-color: #fff; */
+    background-color: #14140F;
+
+}
+
+a {
+    text-decoration: none;
+
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.addNote-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    border: 1px dashed gray;
+    height: 150px;
+    cursor: pointer;
+}
+
+.incon-plus {
+    padding: 0 14px;
+    margin: 8px;
+    color: #fff;
+    /* border: 1px solid; */
+    width: fit-content;
+    border-radius: 50px;
+    font-size: xx-large;
+}
+
+.content {
+    display: contents;
+}
+
+
+
+textarea {
+    cursor: pointer;
+    padding: 5px;
+    padding-top: 14px;
+    outline: none;
+    resize: none;
+    border: none;
+    background: rgba(255,255,255,.2);
+    font-size: 20px;
+    width: 100%;
+    height: 150px;
+    display: block;
+    margin-bottom: 16px;
+    box-shadow: 0 0 1px rgba(0,0,0,.6);
+    text-decoration: inherit;
+
+}
+
+textarea::-webkit-scrollbar {
+    width: 4px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: palevioletred;
+}
+
+.modal-content textarea {
+    cursor: auto;
+}
+
+.submit-button {
+    display: flex;
+    justify-content: flex-end;
+
+}
+.submit-button button {
+    border: none;
+    outline: 0 ;
+    cursor: pointer;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 4px;
+    background-color: #00BFA6;
+    color: white;
+    box-shadow: 2px 2px 5px rgba(0,0,0,.6);
+}
+.item {
+    position: relative;
+    width: 200px;
+    height: 150px;
+}
+
+.remove {
+    position: absolute;
+    padding: 4px;
+    right: 1px;
+    cursor: pointer;
+    color: white;
+}
+
+.modal-content, textarea {
+    border-radius: 4px;
+}
+
+/* Estilo para o modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+  }
+
+  /* Estilo para o conteúdo do modal */
+  .modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 360px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+
+  /* Estilo para o botão de fechar o modal */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  /* Estilo para o botão de fechar quando o mouse passa por cima */
+  .close:hover {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
